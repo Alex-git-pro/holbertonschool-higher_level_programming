@@ -27,7 +27,7 @@ def list_division(my_list_1, my_list_2, list_length):
 
         except Exception as e:
             print(f"Error: {e}")
-            result = 0
+            result = None
 
         finally:
             result_list.append(result)
