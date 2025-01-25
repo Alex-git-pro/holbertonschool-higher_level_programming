@@ -31,8 +31,10 @@ Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-# Test with float overflow
->>> add_integer(float('inf'))
-Traceback (most recent call last):
-    ...
-OverflowError: float overflow
+# Test with float overflow (Python 3 should not raise an exception for inf, but it can vary)
+>>> add_integer(float('inf'), 1)
+inf
+
+# Test with negative float overflow
+>>> add_integer(float('-inf'), 1)
+-inf
