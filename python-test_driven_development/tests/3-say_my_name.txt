@@ -1,32 +1,42 @@
-# Importing the function say_my_name from the module 3-say_my_name
+# Test cases for say_my_name function
+
+# Import the function
 >>> say_my_name = __import__('3-say_my_name').say_my_name
-# Test 1: Using the function with a first name and a last name
-# The function should print "My name is John Smith"
+
+# Test with first and last name
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
-# Test 2: Using the function with a first name and a last name
-# The function should print "My name is Walter White"
->>> say_my_name("Walter", "White")
-My name is Walter White
-
-# Test 3: Using the function with only a first name
-# The function should print "My name is Bob" (since the last name is empty)
+# Test with only first name
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 
-# Test 4: Using the function with a first name that is not a string
-# Here, the first name is an integer (12), which should raise a TypeError
-# The expected error message is: "first_name must be a string"
+# Test with non-string first name
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
-# Test 5: Using the function with a last name that is not a string
-# Here, the last name is an integer (123), which should raise a TypeError
-# The expected error message is: "last_name must be a string"
->>> say_my_name("John", 123)
+# Test with non-string last name
+>>> say_my_name("Walter", 12)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
+
+# Test with empty strings
+>>> say_my_name("", "")
+My name is  
+
+# Test with spaces
+>>> say_my_name("   ", "   ")
+My name is        
+
+# Test with special characters
+>>> say_my_name("John!", "@Smith")
+My name is John! @Smith
+
+# Test with two arguments missing
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
