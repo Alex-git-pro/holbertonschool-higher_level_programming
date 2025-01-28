@@ -1,13 +1,13 @@
 #!/usr/bin/python3
+"""
+Defines a class Square.
+"""
 
 class Square:
     """
-    A class used to represent a square.
-
-    The square is defined by its side length. It provides methods to
-    calculate the area and the perimeter of the square.
-
-    Attributes:
-        side_length (float): The length of the side of the square.
+    Empty class that defines a square.
+    
+    This class has no attributes or methods yet.
+    It is a placeholder for future square-related logic.
     """
     pass
