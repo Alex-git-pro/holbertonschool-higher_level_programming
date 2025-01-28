@@ -33,3 +33,23 @@ class Square:
         TypeError: If the size is not an integer.
         ValueError: If the size is negative.
     """
+
+    def __init__(self, size=0):
+        """
+        Initializes the square with a given size.
+
+        This method takes a parameter `size` and assigns it to the private 
+        attribute `__size` after validating its type and value.
+
+        Args:
+            size (int): The size of the square. Default is 0.
+
+        Raises:
+            TypeError: If `size` is not an integer.
+            ValueError: If `size` is negative.
+        """
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        if size < 0:
+            raise ValueError('size must be >= 0')
+        self.__size = size
