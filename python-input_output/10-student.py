@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module for reading a text file"""
+
 
 class Student:
     """Class representing a student."""

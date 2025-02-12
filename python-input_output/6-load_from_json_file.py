@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module for reading a text file"""
+
+
 import json
 
 def load_from_json_file(filename):
