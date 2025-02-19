@@ -1,0 +1,90 @@
+1. Differences Between HTTP and HTTPS
+Start by defining both protocols and highlighting their main differences:
+
+HTTP (Hypertext Transfer Protocol): This is an unsecured protocol used for transferring data on the web. It sends data in plain text, meaning that it can be intercepted, eavesdropped, or tampered with by malicious parties.
+
+HTTPS (Hypertext Transfer Protocol Secure): HTTPS is the secure version of HTTP. It uses SSL/TLS (Secure Sockets Layer/Transport Layer Security) encryption to encrypt the data being transferred between the client and the server. This ensures that the data is unreadable to anyone trying to intercept it, protecting sensitive information like passwords or credit card numbers.
+
+Main Differences:
+
+HTTP: Unsecured, operates over port 80.
+HTTPS: Secured with SSL/TLS encryption, operates over port 443.
+HTTPS is essential for sites that deal with sensitive data, such as banking websites, e-commerce sites, and email services.
+
+2. Understanding the Structure of HTTP Requests and Responses
+You can provide an example of the structure of an HTTP request and an HTTP response.
+
+Example of an HTTP Request:
+----
+GET /home HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+----
+
+GET: HTTP method used to request a resource.
+/home: The path of the requested resource.
+HTTP/1.1: The version of the HTTP protocol.
+Host: The domain name of the server you're sending the request to.
+User-Agent: Information about the browser or tool sending the request.
+
+HTTP/1.1 200 OK
+Date: Sun, 18 Feb 2025 15:00:00 GMT
+Server: Apache/2.4.41
+Content-Type: text/html; charset=UTF-8
+
+---
+<html>
+<head><title>Welcome to Example</title></head>
+<body><h1>Home Page</h1></body>
+</html>
+---
+
+HTTP/1.1 200 OK: The response indicates that the request was successful (200 OK).
+Date: The date the response was sent.
+Server: The server that responded to the request.
+Content-Type: The type of content being sent in the response body (in this case, HTML).
+3. Exploring HTTP Methods and Status Codes
+You should include examples of HTTP methods and status codes, with a brief description and use case for each:
+
+HTTP Methods:
+
+GET:
+
+Description: Requests data from the server.
+Use Case: Fetching a webpage or data from an API.
+POST:
+
+Description: Sends data to the server to create or update a resource.
+Use Case: Submitting a form, sending data to an API.
+PUT:
+
+Description: Updates a resource with the data sent by the client, or creates it if it doesn't exist.
+Use Case: Updating user profile information.
+DELETE:
+
+Description: Deletes a specified resource.
+Use Case: Deleting a user account from a system.
+HTTP Status Codes:
+
+200 OK:
+
+Description: The request was successful.
+Use Case: A successful webpage or API response.
+301 Moved Permanently:
+
+Description: The resource has been permanently moved to a new location.
+Use Case: Redirecting from an old URL to a new one.
+404 Not Found:
+
+Description: The requested resource could not be found on the server.
+Use Case: When a user tries to access a non-existing page (e.g., a mistyped URL).
+500 Internal Server Error:
+
+Description: A server-side error occurred.
+Use Case: When something goes wrong on the server (e.g., a database crash).
+403 Forbidden:
+
+Description: The server understands the request, but refuses to authorize it.
+Use Case: A user without proper permissions tries to access a restricted resource.
+
