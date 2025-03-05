@@ -1,3 +1,4 @@
+-- Prints the description of the table first_table
 SELECT 
     table_name AS TABLE_NAME, 
     column_name AS COLUMN_NAME, 

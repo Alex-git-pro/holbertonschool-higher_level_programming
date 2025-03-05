@@ -1,4 +1,4 @@
-
+-- Creates a table second_table and add multiple rows
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
